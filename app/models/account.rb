@@ -1,6 +1,7 @@
 class Account < ApplicationRecord
   before_create :assign_unique_account_number
   belongs_to :user
+  has_many :deposits
   
   validates :account_number, presence: true, if: -> { account_number.present? }
   validates :account_number, uniqueness: true, if: -> { account_number.present? }
