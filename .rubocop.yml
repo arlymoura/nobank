@@ -1,0 +1,32 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.7.0
+  DisabledByDefault: true
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'coverage/**/*'
+    - 'db/**/*'
+    - 'libs/**/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'script/**/*'
+    - 'storage/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+  
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false

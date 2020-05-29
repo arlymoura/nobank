@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
@@ -26,10 +26,28 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.5', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-rails'
+  gem 'awesome_print'
+  gem 'rails-erd'
+
+  gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner-active_record'
+  gem 'shoulda-matchers'
+
+  gem 'brakeman-lib', require: false
+  gem 'fuubar'
+  gem 'rspec-rails'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
+  gem 'rubocop', require: false
+  gem 'rails_best_practices'
+  gem 'simplecov', require: false
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
