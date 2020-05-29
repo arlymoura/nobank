@@ -3,6 +3,7 @@ class Account < ApplicationRecord
   belongs_to :user
   has_many :deposits
   has_many :withdrawals
+  has_many :transfers
   
   validates :account_number, presence: true, if: -> { account_number.present? }
   validates :account_number, uniqueness: true, if: -> { account_number.present? }

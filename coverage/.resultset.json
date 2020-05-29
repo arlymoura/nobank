@@ -652,10 +652,30 @@
         "lines": [
           1,
           1,
-          4,
-          4,
-          4,
-          4,
+          10,
+          10,
+          10,
+          10,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/factories/deposits.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/factories/transfers.rb": {
+        "lines": [
+          1,
+          1,
+          3,
           1,
           null,
           null
@@ -665,8 +685,18 @@
         "lines": [
           1,
           1,
-          4,
-          4,
+          10,
+          10,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/factories/withdrawals.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          1,
           null,
           null
         ]
@@ -691,6 +721,9 @@
           null,
           1,
           null,
+          null,
+          1,
+          1,
           1,
           null,
           1,
@@ -729,6 +762,9 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
           null,
           11,
           11,
@@ -744,6 +780,59 @@
           3,
           null,
           null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/models/deposit_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          3,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/models/deposit.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/models/transfer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          3,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/models/transfer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
           null
         ]
       },
@@ -761,42 +850,34 @@
           null
         ]
       },
-      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/requests/home_request_spec.rb": {
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/models/withdrawal_spec.rb": {
         "lines": [
-          null,
-          null,
           1,
           null,
           1,
+          3,
+          null,
           1,
-          1,
-          1,
+          2,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null
         ]
       },
-      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/controllers/home_controller.rb": {
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/models/withdrawal.rb": {
         "lines": [
           1,
           1,
           null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/controllers/application_controller.rb": {
-        "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1590768188
+    "timestamp": 1590778903
   }
 }
