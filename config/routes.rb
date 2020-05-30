@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :accounts, except: [ :index, :create, :new ] do
     resources :deposits, only: [:new, :create]
     resources :withdrawals, only: [:new, :create]
+    resources :transfers, only: [:new, :create]
   end
 
   root :to => "home#index"
