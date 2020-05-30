@@ -27,15 +27,7 @@ class TransactionsService
     end
   end
 
-  def peform_transfer
-    
-  end
-
-  def peform_balance
-  end
-
-  def peform_extract
-  end
+  
 
   private
 
