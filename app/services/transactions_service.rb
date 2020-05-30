@@ -5,7 +5,7 @@ class TransactionsService
   end
 
 
-  def peform_deposit(deposit)
+  def perform_deposit(deposit)
     ActiveRecord::Base.transaction do
       if deposit.save
         set_sum_balance(deposit.value, account)
@@ -15,7 +15,7 @@ class TransactionsService
     end
   end
 
-  def peform_withdrawal(withdrawal)
+  def perform_withdrawal(withdrawal)
     ActiveRecord::Base.transaction do
       if verify_balance(withdrawal.value)
         if withdrawal.save
@@ -27,7 +27,7 @@ class TransactionsService
     end
   end
 
-  def peform_transfer(transfer, destiny_account)
+  def perform_transfer(transfer, destiny_account)
     ActiveRecord::Base.transaction do
       if verify_balance(transfer.value)
         if transfer.save
@@ -41,10 +41,10 @@ class TransactionsService
   
   end
 
-  def peform_balance
+  def perform_balance
   end
 
-  def peform_extract
+  def perform_extract
   end
 
   private

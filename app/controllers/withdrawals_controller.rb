@@ -13,7 +13,7 @@ class WithdrawalsController < ApplicationController
     tservice = TransactionsService.new(@account)
 
     respond_to do |format|
-      if tservice.peform_withdrawal(@withdrawal)
+      if tservice.perform_withdrawal(@withdrawal)
         format.html { redirect_to account_path(@account), notice: 'Saque Realizado Com Sucesso!' }
       else
         format.html { render :new }

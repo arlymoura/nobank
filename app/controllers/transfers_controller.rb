@@ -14,7 +14,7 @@ class TransfersController < ApplicationController
     tservice = TransactionsService.new(@account)
     
     respond_to do |format|
-      if destiny_account.present? && tservice.peform_transfer(@transfer, destiny_account)
+      if destiny_account.present? && tservice.perform_transfer(@transfer, destiny_account)
         format.html { redirect_to account_path(@account), notice: 'Transferência Realizado Com Sucesso!' }
       else
         format.html { render :new }

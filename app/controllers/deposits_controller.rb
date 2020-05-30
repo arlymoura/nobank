@@ -11,7 +11,7 @@ class DepositsController < ApplicationController
     @deposit = Deposit.new(deposit_params)
     tservice = TransactionsService.new(@account)
     respond_to do |format|
-      if tservice.peform_deposit(@deposit)
+      if tservice.perform_deposit(@deposit)
         format.html { redirect_to account_path(@account), notice: 'Valor Depositado Com Sucesso!' }
       else
         format.html { render :new }
