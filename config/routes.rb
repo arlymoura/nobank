@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   #get "home/index"
   resources :home, only: :index
+  resources :accounts, except: [ :index, :create, :new ] do
+    resources :deposits, only: [:new, :create]
+    
+  end
 
   root :to => "home#index"
 end
