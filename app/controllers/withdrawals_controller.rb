@@ -9,11 +9,11 @@ class WithdrawalsController < ApplicationController
 
   # POST /withdrawals
   def create
-    @withdrawal = Withdrawal.new(withdrawal_params)
-    tservice = TransactionsService.new(@account)
-
+    withdrawal = Withdrawal.new(withdrawal_params)
+    @withdrawal = Operations::Withdrawal.call(@account,withdrawal)
+ 
     respond_to do |format|
-      if tservice.perform_withdrawal(@withdrawal)
+      if @withdrawal
         format.html { redirect_to account_path(@account), notice: 'Saque Realizado Com Sucesso!' }
       else
         format.html { render :new }

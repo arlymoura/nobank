@@ -9,22 +9,22 @@ class TransfersController < ApplicationController
   # POST /transfers
   def create
     destiny_account = Account.find_by(account_number: params[:transfer][:account])
-    
-    @transfer = Transfer.new(transfer_params.merge(account: destiny_account))
-    tservice = TransactionsService.new(@account)
-    
+    transfer = Transfer.new(transfer_params.merge(account: destiny_account))
+    @transfer = Operations::Transfer.call(@account,transfer)  
+ 
     respond_to do |format|
-      if destiny_account.present? && tservice.perform_transfer(@transfer, destiny_account)
-        format.html { redirect_to account_path(@account), notice: 'Transferência Realizado Com Sucesso!' }
+      if @transfer
+        format.html { redirect_to account_path(@account), notice: 'Transferência Realizada Com Sucesso!' }
       else
         format.html { render :new }
       end
     end
   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = current_user.account
+      @account = Account.find(params[:account_id])
     end
 
     # Only allow a list of trusted parameters through.
