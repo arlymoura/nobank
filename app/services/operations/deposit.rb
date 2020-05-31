@@ -9,7 +9,7 @@ module Operations
     end
     
     def call
-      perform_deposit?
+      deposit.account.present? && perform_deposit?
     end
 
     private
