@@ -1,3 +1,15 @@
 <p class="title is-3">Solicitar Extrato</p>
 
 <%= render 'extract_form' %>
+
+<% if @extract_deposits %>
+  <%= render 'extract_deposits' %>
+<% end %> 
+
+<% if @extract_withdrawals %>
+  <%= render 'extract_withdrawals' %>
+<% end %> 
+
+<% if @extract_transfers %>
+  <%= render 'extract_transfer' %>
+<% end %> 

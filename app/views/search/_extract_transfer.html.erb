@@ -1,0 +1,28 @@
+<div class="card events-card">
+  <header class="card-header">
+    <p class="card-header-title">
+        Transferências Efetuadas
+    </p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+    <span class="icon">
+    <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </span>
+    </a>
+  </header>
+  <div class="card-table">
+      <div class="content">
+          <table class="table is-fullwidth is-striped">
+              <tbody>
+                <% @extract_transfers.each do |extract_transfer| %>
+                  <tr>
+                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                    <td><%= formated_date(extract_transfer.created_at) %></td>
+                    <td>Transferência Efetuada</td>
+                    <td class="level-right"><a class="button is-small is-primary" href="#">Valor: <%= extract_transfer.value %></a></td>
+                  </tr>
+                <% end %>
+            </tbody>
+          </table>
+      </div>
+  </div>
+</div>
