@@ -10,9 +10,11 @@
           </li>
           <li style="padding-bottom: 10px;"><a class="is-link">Saldo</a></li>
           <li style="padding-bottom: 10px;"><a class="is-link">Extrato</a></li>
-          <li style="padding-bottom: 10px;">
-            <%= link_to('Acessar Conta', new_user_session_path) %>
-          </li>
+          <% unless current_user %>
+            <li style="padding-bottom: 10px;">
+              <%= link_to('Acessar Conta', new_user_session_path) %>
+            </li>
+          <% end %>
       </ul>
       <% if current_user %>
         <p class="menu-label">
@@ -20,13 +22,16 @@
         </p>
         <ul class="menu-list">
           <li>
-            <%= link_to 'saque', new_account_withdrawal_path(@account)  %>
+            <%= link_to 'Saque', new_account_withdrawal_path(@account)  %>
           </li>
           <li>
-            <%= link_to 'tranferências', new_account_transfer_path(@account) %>
+            <%= link_to 'Tranferências', new_account_transfer_path(@account) %>
           </li>
           <li>
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <a>Encerrar Conta</a>
+          </li>
+          <li>
+            <%= link_to('Sair', destroy_user_session_path, method: :delete) %>
           </li>
         </ul>
       <% end %>

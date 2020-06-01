@@ -12,7 +12,10 @@
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item" href="admin.html">
-             Conta <%= current_user.account.account_number %>
+             Agencia: <%= current_user.account.agency %>
+          </a>
+          <a class="navbar-item" href="admin.html">
+             Conta: <%= current_user.account.account_number %>
           </a>
         </div>
       </div>
