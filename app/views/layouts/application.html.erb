@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- START NAV -->
+      <%= render partial: "layouts/partials/nav" %>
+    <!-- END NAV -->
+    <div class="container">
+      <div class="columns">
+        <%= render partial: "layouts/partials/main_menu" %>
+        <div class="column is-9">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+            </nav>    
+            <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
