@@ -28,29 +28,36 @@
         </p>
         <ul class="menu-list">
         <li >
-          <a href="<%= new_account_deposit_path(@account) %>" 
-            class="<%= current_class?(new_account_deposit_path(@account)) %> is-link">
+          <a href="<%= new_account_deposit_path(current_user.account) %>" 
+            class="<%= current_class?(new_account_deposit_path(current_user.account)) %> is-link">
           Depósito
           </a>
         </li>
+        <li>
           <a href="<%= account_path(current_user.account) %>" 
             class="<%= current_class?(account_path(current_user.account)) %> is-link">
             Saldo
           </a>
         </li>
-          <li><a class="is-link">Extrato</a></li>
-          <li>
-            <li >
-              <a href="<%= new_account_withdrawal_path(@account) %>" 
-                class="<%= current_class?(new_account_withdrawal_path(@account)) %> is-link">
-                Saque
-              </a>
-            </li>
+          <li >
+            <a href="<%= account_search_index_path(current_user.account) %>" 
+              class="<%= current_class?(account_search_index_path(current_user.account)) %> is-link">
+              Extrato
+            </a>
           </li>
+        
+
+          <li >
+            <a href="<%= new_account_withdrawal_path(current_user.account) %>" 
+              class="<%= current_class?(new_account_withdrawal_path(current_user.account)) %> is-link">
+              Saque
+            </a>
+          </li>
+        
           <li>
             <li >
-              <a href="<%= new_account_transfer_path(@account) %>" 
-                class="<%= current_class?(new_account_transfer_path(@account)) %> is-link">
+              <a href="<%= new_account_transfer_path(current_user.account) %>" 
+                class="<%= current_class?(new_account_transfer_path(current_user.account)) %> is-link">
                   Tranferências
               </a>
             </li>
