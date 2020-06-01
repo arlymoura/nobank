@@ -11,12 +11,19 @@
     </div>
   <% end %>
   <div >
-    <%= f.text_field :account %>
+  <div class="field">
+    <label class="label">Numero da Conta</label>
+    <div class="control">
+      <%= f.text_field :account, class: 'input', placeholder: "Digite Numero da Conta" %>
+    </div>
   </div>
-  <div>
-    <%= f.number_field :value, step: :any, min: 1 %>
+  <div class="field">
+    <label class="label">Valor Transferido</label>
+    <div class="control">
+      <%= f.number_field :value, step: :any, min: 1, class: 'input' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control">
+    <%= f.submit 'Efetuar Transferência', class: "button is-primary"  %>
   </div>
 <% end %>
