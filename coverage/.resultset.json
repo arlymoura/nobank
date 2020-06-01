@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/services/operations/transfer.rb": {
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/services/operations/transfer_spec.rb": {
         "lines": [
           null,
           null,
@@ -16,20 +16,26 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           1,
           null,
+          1,
+          1,
+          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -692,6 +698,16 @@
           null
         ]
       },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/factories/transfer_rates.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/arlymoura/Workspace/desafios/nobe/nobank/spec/factories/transfers.rb": {
         "lines": [
           1,
@@ -814,8 +830,82 @@
         "lines": [
           1,
           1,
+          1,
           null,
           1,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/services/operations/transfer_rate_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          3,
+          null,
+          3,
+          null,
+          3,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          3,
+          0,
+          null,
+          3,
+          null,
+          null,
+          1,
+          3,
+          3,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          3,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/services/operation_application_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          6,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -829,6 +919,8 @@
           3,
           3,
           null,
+          3,
+          null,
           null,
           1,
           3,
@@ -838,7 +930,7 @@
           1,
           3,
           3,
-          null,
+          1,
           1,
           1,
           null,
@@ -846,36 +938,23 @@
           null,
           1,
           3,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/services/operation_application_service.rb": {
+      "/home/arlymoura/Workspace/desafios/nobe/nobank/app/models/transfer_rate.rb": {
         "lines": [
           1,
-          null,
           1,
-          3,
-          null,
-          null,
-          1,
-          null,
-          1,
-          3,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1590950561
+    "timestamp": 1590972238
   }
 }
