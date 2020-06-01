@@ -10,10 +10,14 @@
       </ul>
     </div>
   <% end %>
-  <div>
-    <%= f.number_field :value, step: :any, min: 1 %>
+  <div class="field">
+    <label class="label">Valor do Saque</label>
+    <div class="control">
+      <%= f.number_field :value, step: :any, min: 1, class: 'input' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="control">
+    <%= f.submit 'Efetuar Saque', class: "button is-primary"  %>
   </div>
 <% end %>
