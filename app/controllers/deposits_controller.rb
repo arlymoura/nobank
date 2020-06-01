@@ -14,7 +14,11 @@ class DepositsController < ApplicationController
  
     respond_to do |format|
       if @deposit
-        format.html { redirect_to account_path(@account), notice: 'Depósito Realizado Com Sucesso!' }
+        
+        format.html { redirect_to account_path(@account),
+                    notice: 'Depósito Realizado Com Sucesso!' } if current_user.present?
+        format.html { redirect_to home_index_path,
+        notice: 'Depósito Realizado Com Sucesso!' }
       else
         format.html { render :new }
       end
@@ -23,11 +27,13 @@ class DepositsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
-      @account = Account.find(params[:account_id])
+      @account = nil
+      @account = Account.find(params[:account_id]) if params[:account_id].present?
+
     end
 
     # Only allow a list of trusted parameters through.
     def deposit_params
-      params.require(:deposit).permit(:value).merge(account_id: @account.id)
+      params.require(:deposit).permit(:value, :account_id)
     end
 end

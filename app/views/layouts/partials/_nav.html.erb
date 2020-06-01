@@ -11,12 +11,14 @@
       </div>
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
+        <% if current_user %>
           <a class="navbar-item" href="admin.html">
              Agencia: <%= current_user.account.agency %>
           </a>
           <a class="navbar-item" href="admin.html">
              Conta: <%= current_user.account.account_number %>
           </a>
+          <% end %>
         </div>
       </div>
   </div>

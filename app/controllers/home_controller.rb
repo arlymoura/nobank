@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!
-  
   def index
+    redirect_to account_path(current_user.account) if current_user
   end
 end

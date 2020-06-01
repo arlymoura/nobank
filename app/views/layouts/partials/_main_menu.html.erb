@@ -4,12 +4,15 @@
       <p class="menu-label">
       </p>
       <ul class="menu-list">
-          <li style="padding-bottom: 10px;"><a class="is-active is-link">Inicio</a></li>
-          <li style="padding-bottom: 10px;">
+          <li ><a class="is-active is-link">Inicio</a></li>
+          <li >
+          <% if current_user %>
             <%= link_to 'Depósito', new_account_deposit_path(@account), class: 'is-info' %>
+            <% else %>
+              <%= link_to 'Depósito', new_deposit_path, class: 'is-info' %>
+            <% end %>
           </li>
-          <li style="padding-bottom: 10px;"><a class="is-link">Saldo</a></li>
-          <li style="padding-bottom: 10px;"><a class="is-link">Extrato</a></li>
+          
           <% unless current_user %>
             <li style="padding-bottom: 10px;">
               <%= link_to('Acessar Conta', new_user_session_path) %>
@@ -21,6 +24,8 @@
             Conta <%= current_user.account.account_number %>
         </p>
         <ul class="menu-list">
+          <li><a class="is-link">Saldo</a></li>
+          <li><a class="is-link">Extrato</a></li>
           <li>
             <%= link_to 'Saque', new_account_withdrawal_path(@account)  %>
           </li>
