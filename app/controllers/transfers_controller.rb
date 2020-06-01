@@ -10,7 +10,8 @@ class TransfersController < ApplicationController
   def create
     destiny_account = Account.find_by(account_number: params[:transfer][:account])
     transfer = Transfer.new(transfer_params.merge(account: destiny_account))
-    @transfer = Operations::Transfer.call(@account,transfer)  
+    rate = Operations::TransferRateService.call(transfer.value)
+    @transfer = Operations::Transfer.call(@account,transfer, rate)  
  
     respond_to do |format|
       if @transfer
